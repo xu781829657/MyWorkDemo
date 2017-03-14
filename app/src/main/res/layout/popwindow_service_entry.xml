@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/service_entry_pop_bg">
+
+
+    <RelativeLayout
+        android:id="@+id/lin_online_service"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/selector_lin_white_click_bg">
+        <ImageView
+            android:id="@+id/iv_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/service_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:textColor="#757575"
+            android:text="在线客服"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#d7d7d7"/>
+
+
+    <LinearLayout
+        android:id="@+id/lin_more"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/selector_lin_white_click_bg">
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:textColor="#757575"
+            android:text="更多"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

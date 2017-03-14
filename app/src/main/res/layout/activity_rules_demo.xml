@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="年利率："
+            android:textSize="15dp" />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tiEt_rate_min"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/shape_rule_edit_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="#ffb98a"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#dadada" />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tiEt_rate_max"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_rule_edit_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="#ffb98a"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="%"
+            android:textColor="#c6c6c6"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <demo.xdw.nwd.com.workdemo.demo.rules.RangeSeekBar
+            android:id="@+id/rsb_rate"
+            style="@style/progress_horizontal_my"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:fold="2"
+            app:maxValue="14"
+            app:partItemNum="5"
+            app:partNum="7"></demo.xdw.nwd.com.workdemo.demo.rules.RangeSeekBar>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="借款期限："
+            android:textSize="15dp" />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tiEt_loan_min"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/shape_rule_edit_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="#ffb98a"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#dadada" />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tiEt_loan_max"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_rule_edit_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="#ffb98a"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="个月"
+            android:textColor="#c6c6c6"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+
+        <demo.xdw.nwd.com.workdemo.demo.rules.RangeSeekBar
+            android:id="@+id/rsb_loan"
+            style="@style/progress_horizontal_my"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:fold="3"
+            app:maxValue="36"
+            app:partItemNum="5"
+            app:partNum="12"></demo.xdw.nwd.com.workdemo.demo.rules.RangeSeekBar>
+    </LinearLayout>
+
+
+</LinearLayout>
