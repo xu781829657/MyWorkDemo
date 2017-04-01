@@ -58,6 +58,15 @@
             android:theme="@style/AppTheme"/>
         <activity android:name=".demo.turntable.TurnTableActivity"
             android:theme="@style/AppTheme"/>
+        <activity android:name=".demo.anima.AnimaAwingActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".demo.anima.Rotate3DActivity"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name=".demo.anima.FadeAnimaActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".demo.anima.AnimaActivity"
+            android:theme="@style/AppTheme"/>
         <service
             android:name=".service.HongbaoService"
             android:enabled="true"

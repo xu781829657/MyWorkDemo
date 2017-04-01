@@ -1,7 +1,6 @@
 package demo.xdw.nwd.com.workdemo.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,32 +8,21 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.base.frame.Base;
-import com.android.base.util.ToastUtils;
 
 import java.util.List;
 
 import demo.xdw.nwd.com.workdemo.R;
-import demo.xdw.nwd.com.workdemo.demo.anima.AnimaActivity;
-import demo.xdw.nwd.com.workdemo.demo.anima.AnimaAwingActivity;
+import demo.xdw.nwd.com.workdemo.demo.anima.FadeAnimaActivity;
 import demo.xdw.nwd.com.workdemo.demo.anima.Rotate3DActivity;
-import demo.xdw.nwd.com.workdemo.demo.circleprogress.CircleProgressDemoActivity;
-import demo.xdw.nwd.com.workdemo.demo.hongbao.HongbaoActivity;
-import demo.xdw.nwd.com.workdemo.demo.onlineservice.OnlineServiceEntryActivity;
-import demo.xdw.nwd.com.workdemo.demo.randomdrag.RandowDragActivity;
-import demo.xdw.nwd.com.workdemo.demo.rules.RulesDemoActivity;
-import demo.xdw.nwd.com.workdemo.demo.rxjava.RxjavaTestActivity;
-import demo.xdw.nwd.com.workdemo.demo.test.TestActivity;
-import demo.xdw.nwd.com.workdemo.demo.turntable.TurnTableActivity;
-import demo.xdw.nwd.com.workdemo.demo.video.VideoActivity;
 import demo.xdw.nwd.com.workdemo.util.SkipUtil;
 
-public class MainRvAdapter extends RecyclerView.Adapter<MainRvAdapter.ViewHolder> {
+public class CommonListAdapter extends RecyclerView.Adapter<CommonListAdapter.ViewHolder> {
 
     private List<String> mDemoTitles;
     private int[] mUsernameColors;
     private Context mContext;
 
-    public MainRvAdapter(Context context, List<String> titles) {
+    public CommonListAdapter(Context context, List<String> titles) {
         mContext = context;
         mDemoTitles = titles;
     }
@@ -45,42 +33,6 @@ public class MainRvAdapter extends RecyclerView.Adapter<MainRvAdapter.ViewHolder
      * @param position
      */
     protected void onItemClick(int position) {
-        switch (position){
-            case 0:
-                //刻度尺demo
-                SkipUtil.gotoActivity(mContext, RulesDemoActivity.class);
-                break;
-            case 1:
-                //刻度尺demo
-                SkipUtil.gotoActivity(mContext, CircleProgressDemoActivity.class);
-                break;
-            case 2:
-                //刻度尺demo
-                SkipUtil.gotoActivity(mContext, OnlineServiceEntryActivity.class);
-                break;
-            case 3:
-                //刻度尺demo
-                SkipUtil.gotoActivity(mContext, RandowDragActivity.class);
-                break;
-            case 4:
-                SkipUtil.gotoActivity(mContext, TestActivity.class);
-                break;
-            case 5:
-                SkipUtil.gotoActivity(mContext, RxjavaTestActivity.class);
-                break;
-            case 6:
-                SkipUtil.gotoActivity(mContext, VideoActivity.class);
-                break;
-            case 7:
-                SkipUtil.gotoActivity(mContext, HongbaoActivity.class);
-                break;
-            case 8:
-                SkipUtil.gotoActivity(mContext, TurnTableActivity.class);
-                break;
-            case 9:
-                SkipUtil.gotoActivity(mContext, AnimaActivity.class);
-                break;
-        }
         Base.showToast("" + position);
     }
 
