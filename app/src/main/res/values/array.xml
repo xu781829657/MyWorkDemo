@@ -17,5 +17,6 @@
     <string-array name="anima_array">
         <item>3D旋转</item>
         <item>淡入淡出动画</item>
+        <item>下拉展开上滑收缩(高度)</item>
     </string-array>
 </resources>

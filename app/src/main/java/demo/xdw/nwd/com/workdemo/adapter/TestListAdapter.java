@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import demo.xdw.nwd.com.workdemo.R;
+import demo.xdw.nwd.com.workdemo.util.LogUtils;
 
 /**
  * Created by xudengwang on 2017/3/31.
@@ -56,6 +57,7 @@ public class TestListAdapter extends BaseAdapter {
         TextView messageTxt = (TextView) convertView
                 .findViewById(R.id.tv_title);
         messageTxt.setText(mMessageList.get(position));
+        //messageTxt.setTag(mMessageList.get(position));
 
         return convertView;
     }

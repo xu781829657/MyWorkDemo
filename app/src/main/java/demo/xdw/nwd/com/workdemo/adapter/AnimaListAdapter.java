@@ -13,6 +13,7 @@ import java.util.List;
 
 import demo.xdw.nwd.com.workdemo.R;
 import demo.xdw.nwd.com.workdemo.demo.anima.FadeAnimaActivity;
+import demo.xdw.nwd.com.workdemo.demo.anima.FadeAnimaFixHeightActivity;
 import demo.xdw.nwd.com.workdemo.demo.anima.Rotate3DActivity;
 import demo.xdw.nwd.com.workdemo.demo.circleprogress.CircleProgressDemoActivity;
 import demo.xdw.nwd.com.workdemo.demo.hongbao.HongbaoActivity;
@@ -44,12 +45,16 @@ public class AnimaListAdapter extends RecyclerView.Adapter<AnimaListAdapter.View
     protected void onItemClick(int position) {
         switch (position){
             case 0:
-                //刻度尺demo
+                //X轴3D旋转
                 SkipUtil.gotoActivity(mContext, Rotate3DActivity.class);
                 break;
             case 1:
-                //刻度尺demo
+                //下拉展开，上滑收缩
                 SkipUtil.gotoActivity(mContext, FadeAnimaActivity.class);
+                break;
+            case 2:
+                //下拉展开，上滑收缩固定高度
+                SkipUtil.gotoActivity(mContext, FadeAnimaFixHeightActivity.class);
                 break;
         }
         Base.showToast("" + position);

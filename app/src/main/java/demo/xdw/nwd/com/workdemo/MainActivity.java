@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.MotionEvent;
 
 import com.android.base.frame.Base;
@@ -33,6 +34,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initData() {
         mContext = this;
+        Log.d("123","!!!!!!!!!!!lint log error test");
         Base.saveDisplaySize(this);
         String[] demo_string_array = getResources().getStringArray(R.array.main_array);
         mDemos = Arrays.asList(demo_string_array);
