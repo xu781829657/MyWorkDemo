@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply from: '../config/quality.gradle'
+apply plugin: 'checkstyle'
 
 android {
     compileSdkVersion 24
@@ -18,7 +19,32 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    lintOptions { abortOnError true }
+    lintOptions {
+        abortOnError true
+        xmlReport true
+        htmlReport false
+//        lintConfig file("${project.rootDir}/config/quality/lint/lint.xml")
+        htmlOutput file("$project.buildDir/reports/lint/lint-result.html")
+        xmlOutput file("$project.buildDir/reports/lint/lint-result.xml")
+    }
+
+    lintOptions {
+        // Turns off checks for the issue IDs you specify.
+        disable 'TypographyFractions','TypographyQuotes'
+        // Turns on checks for the issue IDs you specify. These checks are in
+        // addition to the default lint checks.
+        enable 'RtlHardcoded','RtlCompat', 'RtlEnabled'
+        // To enable checks for only a subset of issue IDs and ignore all others,
+        // list the issue IDs with the 'check' property instead. This property overrides
+        // any issue IDs you enable or disable using the properties above.
+        check 'NewApi', 'InlinedApi'
+        // If set to true, turns off analysis progress reporting by lint.
+        quiet true
+        // if set to true (default), stops the build if errors are found.
+        abortOnError false
+        // if true, only report errors.
+        ignoreWarnings true
+    }
 }
 
 dependencies {
@@ -35,3 +61,14 @@ dependencies {
     compile project(':AndroidBase')
     compile project(':lintrule_aar')
 }
+
+//task checkstyle(type: Checkstyle) {
+//    source 'src'
+//    include '**/*.java'
+//    exclude '**/gen/**'
+//    exclude '**/R.java'
+//    exclude '**/BuildConfig.java'
+//    configFile new File(rootDir, "checkstyle.xml")
+//    // empty classpath
+//    classpath = files()
+//}
