@@ -20,10 +20,13 @@ import demo.xdw.nwd.com.workdemo.demo.anima.Rotate3DActivity;
 import demo.xdw.nwd.com.workdemo.demo.circleprogress.CircleProgressDemoActivity;
 import demo.xdw.nwd.com.workdemo.demo.hongbao.HongbaoActivity;
 import demo.xdw.nwd.com.workdemo.demo.onlineservice.OnlineServiceEntryActivity;
+import demo.xdw.nwd.com.workdemo.demo.pullnext.PullNextAc;
 import demo.xdw.nwd.com.workdemo.demo.randomdrag.RandowDragActivity;
 import demo.xdw.nwd.com.workdemo.demo.rules.RulesDemoActivity;
 import demo.xdw.nwd.com.workdemo.demo.rxjava.RxjavaTestActivity;
 import demo.xdw.nwd.com.workdemo.demo.test.TestActivity;
+import demo.xdw.nwd.com.workdemo.demo.test.TestTextViewAc;
+import demo.xdw.nwd.com.workdemo.demo.textview.TestTextView;
 import demo.xdw.nwd.com.workdemo.demo.turntable.TurnTableActivity;
 import demo.xdw.nwd.com.workdemo.demo.video.VideoActivity;
 import demo.xdw.nwd.com.workdemo.util.SkipUtil;
@@ -79,6 +82,12 @@ public class MainRvAdapter extends RecyclerView.Adapter<MainRvAdapter.ViewHolder
                 break;
             case 9:
                 SkipUtil.gotoActivity(mContext, AnimaActivity.class);
+                break;
+            case 10:
+                SkipUtil.gotoActivity(mContext, TestTextViewAc.class);
+                break;
+            case 11:
+                SkipUtil.gotoActivity(mContext, PullNextAc.class);
                 break;
         }
         Base.showToast("" + position);

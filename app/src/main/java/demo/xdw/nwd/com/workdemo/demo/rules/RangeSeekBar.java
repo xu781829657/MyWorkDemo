@@ -27,12 +27,12 @@ import demo.xdw.nwd.com.workdemo.util.DensityUtil;
 import demo.xdw.nwd.com.workdemo.util.LogUtils;
 
 /**
- * @author jayce
- * @date 2015/3/9
+ * @author xudengwang
+ * @date 2017/05/22
  */
 public class RangeSeekBar extends ViewGroup {
     private boolean is_init;
-    private Drawable mThumbDrawable;
+    private Drawable mThumbDrawable;//左右滑动浮标图片
     private Drawable mThumbPlaceDrawable;
 
     private ThumbView mThumbLeft;   //左游标
@@ -53,8 +53,7 @@ public class RangeSeekBar extends ViewGroup {
     private int proPaddingLeftAndRight;     //进度条左右的padding 等于游标图标宽度的一半
     private int mProBaseline;       //进度条top  坐标
 
-    //private static final int PART_ITEM = 5;//半节占的分数,卡尺左右两边不可滑动的区域
-    private int PART_ITEM;
+    private int PART_ITEM;//半节占的分数,卡尺左右两边不可滑动的区域
     private float mPartWidth;   //每一小份的宽度
 
     public static final int SHORTLINE_HEIGHT = 5; //短线的高度 （画刻度时会有长短线）
@@ -69,7 +68,7 @@ public class RangeSeekBar extends ViewGroup {
     private OnRangeChangeListener mOnRangeChangeListener;       //当左右任意一个游标改变时，回调接口
 
     public interface OnRangeChangeListener {
-        public void onRangeChange(int leftValue, int rightValue);
+        void onRangeChange(int leftValue, int rightValue);
     }
 
     public RangeSeekBar(Context context) {
@@ -83,7 +82,7 @@ public class RangeSeekBar extends ViewGroup {
     public RangeSeekBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        setBackgroundDrawable(new BitmapDrawable());
+        //setBackgroundDrawable(new BitmapDrawable());
 
         TypedArray mTypedArray = context.obtainStyledAttributes(attrs,
                 R.styleable.RangeSeekBar);
