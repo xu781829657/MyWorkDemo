@@ -71,8 +71,12 @@
             android:theme="@style/AppTheme"/>
         <activity android:name=".demo.pullnext.PullNextAc"
                   android:theme="@style/AppTheme"/>
+        <activity android:name=".demo.cityaddress.CityAddressAc"
+                  android:theme="@style/AppTheme"/>
 
         <activity android:name=".demo.test.TestTextViewAc"
+                  android:theme="@style/AppTheme"/>
+        <activity android:name=".demo.listview.RvPullUpAc"
                   android:theme="@style/AppTheme"/>
         <service
             android:name=".service.HongbaoService"

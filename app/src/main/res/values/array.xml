@@ -14,6 +14,8 @@
         <item>动画集合</item>
         <item>textview padding测试</item>>
         <item>下拉切换页面</item>
+        <item>城市地址选择</item>
+        <item>RV上拉加载下拉刷新</item>
     </string-array>
 
     <string-array name="anima_array">
